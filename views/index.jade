@@ -1,0 +1,16 @@
+doctype html
+html
+  script(src='/javascripts/socket.io.js')
+  head
+    link(rel='stylesheet', media='(max-width: 1000px)', type='text/css', href='stylesheets/stylePhone.css')
+    link(rel='stylesheet', media='(min-width: 1000px)', type='text/css', href='stylesheets/stylePc.css')
+  body
+    header#header.grid.grid-align-top.grid-item
+    #center.grid.align-middle
+      #leftMenu.grid-item(class="1/6")
+      #main.grid-item(class="4/6")
+      #rightMenu.grid-item(class="1/6")
+    footer#footer.grid.grid-align-bottom.grid-item
+  
+  script(src='/javascripts/ui-manager.js')
+  script(src='/javascripts/main.js')

@@ -1,0 +1,24 @@
+@import url("cardinal.min.css");
+
+html {
+  font-size: 1em;
+}
+
+
+#footer {
+  border: solid 3px black;
+}
+
+#header {
+  color: green;
+  border: solid 3px green;
+}
+#rightMenu {
+  border: solid 3px yellow;
+}
+#leftMenu {
+  border: solid 3px blue;
+}
+#main {
+  border: solid 3px red;
+}
