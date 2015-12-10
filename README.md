@@ -4,7 +4,7 @@
 - The backend is NodeJS ExpressJS SocketIO, a php backend will be available soon.
 <br>
 <br>
-- The main layer structure (views/jade.html) is made using CardinalCSS.
+- The main layer structure (views/index.jade) is made using CardinalCSS.
 <br>
 <br>
 - There is already a html template done using CardinalCSS.
