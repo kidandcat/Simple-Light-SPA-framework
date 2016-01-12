@@ -1,1 +1,1 @@
-alert('hello world! dont kill me!!');
+console.log('uno');

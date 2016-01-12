@@ -64,7 +64,7 @@ app.use(function(err, req, res, next) {
   res.send('error');
 });
 
-var server = app.listen('81');
+var server = app.listen('80');
 io = socketio.listen(server);
 require('./routes/socket-server').listen(io, console);
 
