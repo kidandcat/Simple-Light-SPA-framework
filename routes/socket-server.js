@@ -71,7 +71,9 @@ module.exports.listen = function(io, console) {
   io.sockets.on('connection', function(socket) {
     console.log(' Socket connected'.blue);
 
-    lazyLoad(socket);
+    socket.on('pages', function(){
+      lazyLoad(socket);
+    });
   });
 
 
