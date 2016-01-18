@@ -22,6 +22,7 @@ getDirectories('./snippets/').forEach(function(e) {
     console.log('Reading snippet: '.grey + files[i].cyan);
     elements[e][files[i]] = {
       page: page,
+      pageFiles: files.length,
       data: fs.readFileSync(e + files[i], 'utf8')
     };
   }
@@ -44,6 +45,7 @@ var watcher = watch('./snippets', function() {
       console.log('Reading snippet: '.grey + files[i].cyan);
       elements[e][files[i]] = {
         page: page,
+        pageFiles: files.length,
         data: fs.readFileSync(e + files[i], 'utf8')
       };
     }
@@ -85,6 +87,7 @@ module.exports.listen = function(io, console) {
           socket.emit('element', {
             type: 'html',
             page: elements[o][i].page,
+            pageFiles: elements[o][i].pageFiles,
             id: i.split(".html")[0],
             data: elements[o][i].data
           });
@@ -92,6 +95,7 @@ module.exports.listen = function(io, console) {
           socket.emit('element', {
             type: 'css',
             page: elements[o][i].page,
+            pageFiles: elements[o][i].pageFiles,
             id: i.split(".css")[0],
             data: elements[o][i].data
           });
@@ -99,6 +103,7 @@ module.exports.listen = function(io, console) {
           socket.emit('element', {
             type: 'js',
             page: elements[o][i].page,
+            pageFiles: elements[o][i].pageFiles,
             id: i.split(".js")[0],
             data: elements[o][i].data
           });

@@ -52,6 +52,7 @@ var UImanager = (function () {
             pages[data.page].push(data);
             ret.emit('page', {
                 page: data.page,
+                pageFiles: data.pageFiles,
                 type: data.type
             });
         });
@@ -70,6 +71,7 @@ var UImanager = (function () {
                         pages[data.page].push(data);
                         ret.emit('page', {
                             page: data.page,
+                            pageFiles: data.pageFiles,
                             type: data.type
                         });
                     } else {

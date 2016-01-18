@@ -1,4 +1,5 @@
 # Simple&Light-SPA-framework
+
 This is a single page application/structure, it uses the unique view in 'views' folder 
 to make the main html structure, then the app download from the server asynchronously all the 
 views html, css and js, images will be implemented too. You can render any view right after
