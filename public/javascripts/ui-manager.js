@@ -6,8 +6,9 @@ var UImanager = (function () {
     pages.index = [];
 
 
-
+    // * * * * * * * * * * * * * *
     // * * * TRANSPORT LAYER * * *
+    // * * * * * * * * * * * * * *
     // METHOD connect receive next json:
     // config.tech(php|socketIO)
     // config.phpMethod(GET|POST) optional, default GET
@@ -81,9 +82,9 @@ var UImanager = (function () {
         }, 500);
     }
 
-
+    //* * * * * * * * * * * * * 
     // * * * RENDER LAYER * * *
-
+    //* * * * * * * * * * * * *
     ret.render = function (pag) {
         try {
             var toDelete = document.getElementsByClassName('UImanagerPage');
@@ -113,9 +114,9 @@ var UImanager = (function () {
 
 
 
-
+    // * * * * * * * * * * * * *
     // * * * EVENTS LAYER * * *
-
+    // * * * * * * * * * * * * *
     ret.emit = function (evt, args) {
         if (listeners.hasOwnProperty(evt)) {
             listeners[evt].forEach(function (func) {
