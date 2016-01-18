@@ -1,4 +1,14 @@
 # Simple&Light-SPA-framework
+This is a single page application/structure, it uses the unique view in 'views' folder 
+to make the main html structure, then the app download from the server asynchronously all the 
+views html, css and js, images will be implemented too. You can render any view right after
+it has been downloaded, you don't need to wait for the rest of views.
+
+The creation of a view is as simple as make a folder in 'snippets', the name of the folder
+will be the name of the view at the time of rendering it ``(UImanager.render('viewName'))``,
+inside that folder you can create .html files, which contents will override the divs which ids
+coincide with the .html files names. The names of the .js and .css files doesn't matter. 
+Look in 'public' folder for examples.
 
 <br>
 - The backend is NodeJS ExpressJS SocketIO, a php backend will be available soon.

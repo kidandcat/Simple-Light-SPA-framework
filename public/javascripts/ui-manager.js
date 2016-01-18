@@ -9,7 +9,7 @@ var UImanager = (function () {
     // * * * * * * * * * * * * * *
     // * * * TRANSPORT LAYER * * *
     // * * * * * * * * * * * * * *
-    // METHOD connect receive next json:
+    // METHOD 'connect' receive next json:
     // config.tech(php|socketIO)
     // config.phpMethod(GET|POST) optional, default GET
     // config.url(url) optional for socketIO
@@ -81,6 +81,8 @@ var UImanager = (function () {
             xhttp.send(config.sendData.url);
         }, 500);
     }
+
+
 
     //* * * * * * * * * * * * * 
     // * * * RENDER LAYER * * *
