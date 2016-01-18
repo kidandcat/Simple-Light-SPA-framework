@@ -1,3 +1,4 @@
+/* global io */
 var UImanager = (function () {
     var ret = {};
     var pages = {};
@@ -62,7 +63,7 @@ var UImanager = (function () {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 if (xhttp.readyState == 4 && xhttp.status == 200) {
-                    var data = JSON.parse(http_request.responseText);
+                    var data = JSON.parse(xhttp.responseText);
                     if (!data.end) {
                         (typeof pages[data.page] !== 'object') ? pages[data.page] = [] : true;
                         pages[data.page].push(data);
@@ -75,7 +76,7 @@ var UImanager = (function () {
                     }
                 }
             };
-            xhttp.open(config.phpMethod || 'GET', (config.phpMethod === 'POST') ? url : url + '?' + config.sendData.url, true);
+            xhttp.open(config.phpMethod || 'GET', (config.phpMethod === 'POST') ? config.url : config.url + '?' + config.sendData.url, true);
             xhttp.send(config.sendData.url);
         }, 500);
     }
